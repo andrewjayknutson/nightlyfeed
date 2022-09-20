@@ -211,7 +211,6 @@ namespace Utilities360Wow
             //retrieve google reviews
             try
             {
-                //HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create("https://mybusiness.googleapis.com/v4/accounts/101547720956473214676/locations/" + reviewsID + "/reviews?pageSize=100");
                 HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create("https://mybusiness.googleapis.com/v4/accounts/" + accountID + "/locations/" + reviewsID + "/reviews?pageSize=100");
                 webReq.UseDefaultCredentials = true; webReq.Headers.Add("Authorization", "Bearer " + ga);
                 webReq.Method = "GET";
@@ -296,7 +295,6 @@ namespace Utilities360Wow
             //retrieve google reviews
             try
             {
-                //HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create("https://mybusiness.googleapis.com/v4/accounts/101547720956473214676/locations/" + reviewsID + "/reviews");
                 HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create("https://mybusiness.googleapis.com/v4/accounts/" + accountID + "/locations/" + reviewsID + "/reviews");
                 webReq.UseDefaultCredentials = true; webReq.Headers.Add("Authorization", "Bearer " + googleAPIToken);
                 webReq.Method = "GET";
@@ -338,7 +336,6 @@ namespace Utilities360Wow
                 WebRequest request = WebRequest.Create("https://www.googleapis.com/oauth2/v4/token");
                 request.Method = "POST";
 
-                //rcData = "client_secret=vDkIo0cTng_f8oElhW3FKFhd&grant_type=refresh_token&refresh_token=1%2FaFKRF9mhKiW8gfIVjMUHU13wsbHENjxuJvzyJy-2YcA&client_id=630764660080-07l3sjjj515i462acslkjvcs98b8ce19.apps.googleusercontent.com";
                 rcData = "client_secret=" + clientSecret + "&grant_type=refresh_token&refresh_token=" + refreshToken;
                 string postData = rcData;
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
