@@ -20,7 +20,7 @@ namespace Utilities360Wow
 
             HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create("https://slack.com/api/users.list");
 
-            webReq.UseDefaultCredentials = true; webReq.Headers.Add("Authorization", "Bearer xoxb-169851555877-904447001573-ak4PI6DIW5HcKDCjt1NFU1QK");
+            webReq.UseDefaultCredentials = true; webReq.Headers.Add("Authorization", "Bearer ");
             webReq.Method = "GET";
             HttpWebResponse webResp = (HttpWebResponse)webReq.GetResponse();
             Stream answer = webResp.GetResponseStream();
